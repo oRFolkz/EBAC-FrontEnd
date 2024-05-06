@@ -1,0 +1,42 @@
+@use 'reset';
+@use 'header';
+@use 'catalogo';
+@use 'variables';
+@use 'sass:math';
+
+@function pixelToEm($alvoEmPixel,$contextoEmPixel: 16px) {
+    @return math.div($alvoEmPixel, $contextoEmPixel)+em;
+}
+body {
+    background-color: #f5f6fa;
+
+    li {
+        list-style: none;
+    }
+
+    section {
+        padding: pixelToEm(56px) 0;
+    }
+
+}
+
+@media screen and (max-width: variables.$tablet) {
+    .container {
+        max-width: 80%;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 48.5%);
+        column-gap: 3%;
+    }
+}
+
+@media screen and (max-width: variables.$mobile) {
+    .products {
+        display: block;
+    }
+
+    .product-item  {
+        margin-bottom: pixelToEm(32px);
+    }
+}

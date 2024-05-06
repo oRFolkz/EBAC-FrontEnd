@@ -1,0 +1,39 @@
+@use 'variables';
+
+@mixin fullWidth() {
+    width: 100%;
+}
+.container {
+    @include fullWidth();
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.products {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 32.66%);
+    column-gap: 1%;
+    row-gap: 4%;
+    @include fullWidth();
+
+    .product-item img {
+        @include fullWidth();
+        border-radius: 16px;
+    }
+
+    .product-button {
+        display: block;
+        background-color: variables.$btn-color;
+        color: #fff;
+        text-align: center;
+        padding: 8px 0;
+        border-radius: 8px;
+        margin-top: 8px;
+        text-decoration: none;
+
+        &:hover {
+            background-color: variables.$btn-color-hover;
+        }
+    }
+}
