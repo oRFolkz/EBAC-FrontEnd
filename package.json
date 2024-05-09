@@ -1,15 +1,21 @@
 {
-  "name": "sass",
+  "dependencies": {
+    "gulp": "^5.0.0"
+  },
+  "name": "gulp",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
+  "devDependencies": {
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.77.0"
+  },
   "scripts": {
-    "sass": "sass source/main.scss build/main.css --watch",
+    "gulp": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "sass": "^1.76.0"
-  }
+  "description": ""
 }
