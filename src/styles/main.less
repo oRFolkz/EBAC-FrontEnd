@@ -1,0 +1,24 @@
+@import 'variaveis.less';
+@breakpointMobile: ~"(max-width: 767px)";
+
+body {
+    background-color: #colors[@bodyBackgroundColor];
+}
+
+.container {
+    max-width: 960px;
+    width: 100%;
+    height: 50vh;
+    background-color: #colors[@containerBackgroundColor];
+    margin: 0 auto;
+    @media @breakpointMobile {
+        background-color: #colors[@containerMobileBackgroundColor];
+    }
+}
+
+.text{
+    color: #colors[@textColor];
+    font-weight: bold;
+    font-size: 3rem;
+    text-align: center;
+}
